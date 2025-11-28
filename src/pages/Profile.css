@@ -1,7 +1,7 @@
 .profile-page {
   background-color: #f8f8f8;
   min-height: 100vh;
-  padding: 32px 48px 64px;
+  padding: 0 48px 64px;
 }
 
 .profile-page .dashboard-nav {
@@ -181,6 +181,7 @@
 }
 
 @media (max-width: 640px) {
+
   .stats-grid,
   .profile-grid,
   .portfolio-grid,
@@ -194,4 +195,3 @@
     gap: 16px;
   }
 }
-

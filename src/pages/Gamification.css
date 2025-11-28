@@ -1,7 +1,7 @@
 .gamification-page {
   background-color: #f8f8f8;
   min-height: 100vh;
-  padding: 32px 48px 64px;
+  padding: 0 48px 64px;
 }
 
 .gamification-page .dashboard-nav {
@@ -192,4 +192,3 @@
     grid-template-columns: 1fr;
   }
 }
-
