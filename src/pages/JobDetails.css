@@ -1,0 +1,210 @@
+.job-details-page {
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  padding: 32px 48px 64px;
+  color: #111;
+}
+
+.job-details-page .dashboard-nav {
+  margin-bottom: 32px;
+}
+
+.job-details-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.job-details-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.job-details-card,
+.proposal-form,
+.proposal-card {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 14px;
+  padding: 28px;
+}
+
+.job-details-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.job-details-header h1 {
+  font-size: 2rem;
+}
+
+.job-meta {
+  display: flex;
+  gap: 12px;
+  color: #555;
+  flex-wrap: wrap;
+}
+
+.job-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.job-tags span {
+  border: 1px solid #111;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+}
+
+.job-details-card section {
+  margin-bottom: 24px;
+}
+
+.job-details-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.job-details-card ul {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.proposal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.proposal-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  background-color: #fdfdfd;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.proposal-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.stat-value {
+  font-weight: 600;
+}
+
+.proposal-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.proposal-fields label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.proposal-fields input,
+.proposal-fields textarea {
+  border: 1px solid #dadada;
+  border-radius: 10px;
+  padding: 12px;
+  font-family: inherit;
+}
+
+.proposal-fields textarea {
+  resize: none;
+}
+
+.proposal-note {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.proposal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.proposal-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.proposal-person {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.avatar-placeholder {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.proposal-name {
+  font-weight: 600;
+}
+
+.proposal-rating {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.proposal-price {
+  margin-left: auto;
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.proposal-price strong {
+  font-size: 1.2rem;
+}
+
+.proposal-summary {
+  color: #444;
+  line-height: 1.5;
+}
+
+.proposal-actions {
+  display: flex;
+  gap: 12px;
+}
+
+@media (max-width: 1024px) {
+  .job-details-page {
+    padding: 24px;
+  }
+
+  .job-details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

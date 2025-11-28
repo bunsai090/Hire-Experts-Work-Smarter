@@ -1,0 +1,171 @@
+.auth-page {
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  padding: 48px 20px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  color: #111;
+}
+
+.auth-brand {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-icon {
+  font-size: 1.2rem;
+}
+
+.brand-label {
+  line-height: 1.1;
+}
+
+.brand-name {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.brand-tagline {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.auth-welcome {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 14px;
+  background-color: #fff;
+  padding: 32px 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.auth-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 999px;
+  padding: 6px;
+  background-color: #f8f8f8;
+  gap: 6px;
+}
+
+.auth-tabs button {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 12px;
+  font-family: inherit;
+  font-weight: 600;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.auth-tabs button.is-active {
+  background-color: #111;
+  color: #fff;
+}
+
+.auth-heading h1 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.auth-heading p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.auth-form input {
+  border: 1px solid #dadada;
+  border-radius: 10px;
+  padding: 12px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background-color: #fff;
+}
+
+.auth-form input:focus {
+  outline: 1px solid #111;
+}
+
+.form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  font-size: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #111;
+  font-weight: 600;
+}
+
+.solid-btn.full {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+
+.auth-switch {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.auth-switch a {
+  font-weight: 600;
+  color: #111;
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 28px 24px;
+  }
+
+  .form-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+

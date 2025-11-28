@@ -1,0 +1,195 @@
+.gamification-page {
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  padding: 32px 48px 64px;
+}
+
+.gamification-page .dashboard-nav {
+  margin-bottom: 32px;
+}
+
+.gamification-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.panel {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.level-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 14px;
+  padding: 32px;
+}
+
+.level-panel h1 {
+  font-size: 2.4rem;
+  margin-bottom: 6px;
+}
+
+.level-points {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.progress-track {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background-color: #ededed;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-track.small {
+  height: 6px;
+  margin: 12px 0 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #111;
+  border-radius: inherit;
+}
+
+.level-icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 1px solid #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.gamification-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.badge-card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.badge-card.earned {
+  background-color: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+.badge-head {
+  display: flex;
+  gap: 12px;
+}
+
+.badge-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leaderboard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.leaderboard-row {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 999px;
+  padding: 10px 16px;
+  align-items: center;
+}
+
+.leaderboard-row.highlight {
+  background-color: #111;
+  color: #fff;
+}
+
+.rank-pill {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.achievement-list,
+.earn-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.achievement-row,
+.earn-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 12px;
+}
+
+.achievement-row:last-child,
+.earn-row:last-child {
+  border-bottom: none;
+}
+
+.achievement-title {
+  font-weight: 600;
+}
+
+.achievement-date {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+@media (max-width: 1024px) {
+  .gamification-page {
+    padding: 24px;
+  }
+
+  .gamification-grid,
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
