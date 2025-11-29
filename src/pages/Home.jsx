@@ -55,110 +55,101 @@ export default function Home() {
       <Header className="hero-nav" />
 
       <main>
+        {/* Hero Section */}
         <section className="hero-section">
-          <div className="hero-copy">
-            <p className="eyebrow">Connect worldwide</p>
-            <h1>Hire Experts. Work Smarter.</h1>
+          <div className="hero-content">
+            <h1>Hire Experts.<br />Work Smarter.</h1>
             <p className="hero-description">
               Connect with top freelancers worldwide. Build your dream team or find your next opportunity.
             </p>
             <div className="hero-actions">
-              <Link className="solid-btn" to="/register">
+              <Link className="btn btn-primary" to="/register">
                 Get Started
               </Link>
-              <Link className="ghost-btn" to="/dashboard">
+              <Link className="btn btn-secondary" to="/dashboard">
                 Browse Freelancers
               </Link>
             </div>
           </div>
         </section>
 
-        <section className="section-block">
-          <div className="section-header">
-            <h2>Popular Categories</h2>
-            <p>Discover in-demand expertise</p>
-          </div>
+        {/* Popular Categories Section */}
+        <section className="section">
+          <h2 className="section-title">Popular Categories</h2>
 
           <div className="category-grid">
             {categories.map((category) => {
               const IconComponent = category.icon
               return (
-                <article key={category.title} className="category-card">
-                  <span className="category-icon">
+                <div key={category.title} className="category-card">
+                  <div className="category-icon">
                     <IconComponent />
-                  </span>
-                  <div>
-                    <p className="category-title">{category.title}</p>
-                    <p className="category-count">{category.count}</p>
                   </div>
-                </article>
+                  <h3 className="category-title">{category.title}</h3>
+                  <p className="category-count">{category.count}</p>
+                </div>
               )
             })}
           </div>
         </section>
 
-        <section className="section-block">
-          <div className="section-header">
-            <h2>Featured Freelancers</h2>
-            <p>Handpicked professionals ready to collaborate</p>
-          </div>
+        {/* Featured Freelancers Section */}
+        <section className="section">
+          <h2 className="section-title">Featured Freelancers</h2>
 
           <div className="freelancer-grid">
             {featuredFreelancers.map((freelancer) => (
-              <article key={freelancer.name} className="freelancer-card">
-                <div className="freelancer-avatar">{freelancer.name.charAt(0)}</div>
-                <p className="freelancer-name">{freelancer.name}</p>
+              <div key={freelancer.name} className="freelancer-card">
+                <div className="freelancer-avatar">
+                  {freelancer.name.charAt(0)}
+                </div>
+                <h3 className="freelancer-name">{freelancer.name}</h3>
                 <p className="freelancer-role">{freelancer.role}</p>
                 <p className="freelancer-rating">★ {freelancer.rating}</p>
-                <div className="freelancer-tags">
+                <div className="freelancer-skills">
                   {freelancer.skills.map((skill) => (
-                    <span key={skill}>{skill}</span>
+                    <span key={skill} className="skill-tag">{skill}</span>
                   ))}
                 </div>
-              </article>
+              </div>
             ))}
           </div>
         </section>
 
-        <section className="section-block steps-section" id="how-trabahohub-works">
-          <div className="section-header">
-            <h2>How TrabahoHub Works</h2>
-            <p>Get started in three simple steps</p>
-          </div>
+        {/* How It Works Section */}
+        <section className="section how-it-works">
+          <h2 className="section-title">How TrabahoHub Works</h2>
 
           <div className="steps-grid">
             {steps.map((step, index) => {
               const IconComponent = step.icon
               return (
-                <article key={step.label} className="step-card">
-                  <span className="step-icon">
+                <div key={step.label} className="step-card">
+                  <div className="step-icon">
                     <IconComponent />
-                  </span>
-                  <p className="step-count">STEP {index + 1}</p>
-                  <p className="step-title">{step.label}</p>
+                  </div>
+                  <p className="step-number">STEP {index + 1}</p>
+                  <h3 className="step-title">{step.label}</h3>
                   <p className="step-description">{step.description}</p>
-                </article>
+                </div>
               )
             })}
           </div>
         </section>
 
+        {/* CTA Section */}
         <section className="cta-section">
-          <div className="cta-card">
-            <p className="eyebrow">Join the community</p>
-            <h2>Ready to get started?</h2>
-            <p>Join thousands of freelancers and clients building the future of work.</p>
-            <Link className="solid-btn" to="/register">
-              Create Your Account
-            </Link>
-          </div>
+          <h2>Ready to get started?</h2>
+          <p>Join thousands of freelancers and clients building the future of work.</p>
+          <Link className="btn btn-primary" to="/register">
+            Create Your Account
+          </Link>
         </section>
       </main>
 
-      <footer className="home-footer">
+      <footer className="footer">
         <p>© 2024 TrabahoHub. All rights reserved.</p>
       </footer>
     </div>
   )
 }
-

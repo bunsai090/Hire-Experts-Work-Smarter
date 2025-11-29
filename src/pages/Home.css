@@ -1,291 +1,342 @@
-.ghost-btn,
-.solid-btn {
-  font-family: inherit;
+/* Global Styles */
+.home-page {
+  background-color: #f8f8f8;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 24px;
   border-radius: 8px;
-  padding: 10px 20px;
-  border: 1px solid #111;
-  background-color: transparent;
-  cursor: pointer;
   font-size: 0.95rem;
   font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #111;
 }
 
-.solid-btn {
+.btn-primary {
   background-color: #111;
   color: #fff;
+  border: 1px solid #111;
 }
 
+.btn-primary:hover {
+  background-color: #000;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #111;
+  border: 1px solid #111;
+}
+
+.btn-secondary:hover {
+  background-color: #f5f5f5;
+}
+
+/* Main Container */
 main {
   max-width: 1100px;
   margin: 0 auto;
+  padding: 0 24px;
 }
 
+/* Hero Section */
 .hero-section {
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 14px;
+  text-align: center;
+  padding: 80px 20px;
   background-color: #fff;
-  padding: 80px 60px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
   margin-bottom: 40px;
 }
 
-.hero-copy {
-  max-width: 640px;
-}
-
-.eyebrow {
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  color: #666;
+.hero-content {
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .hero-section h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.1;
+  color: #111;
 }
 
 .hero-description {
-  font-size: 1.1rem;
-  color: #444;
-  margin-bottom: 28px;
-  line-height: 1.5;
+  font-size: 1.125rem;
+  color: #666;
+  margin-bottom: 32px;
+  line-height: 1.6;
 }
 
 .hero-actions {
   display: flex;
   gap: 16px;
+  justify-content: center;
 }
 
-.section-block {
-  padding: 48px;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 14px;
-  margin-bottom: 32px;
+/* Section */
+.section {
+  margin-bottom: 64px;
 }
 
-.section-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 24px;
-  gap: 16px;
-}
-
-.section-header h2 {
+.section-title {
   font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #111;
 }
 
-.section-header p {
-  color: #555;
-}
-
+/* Popular Categories */
 .category-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  gap: 20px;
 }
 
 .category-card {
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 12px;
-  padding: 20px;
-  background-color: #fdfdfd;
-  display: flex;
-  gap: 12px;
-  align-items: center;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.category-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
 }
 
 .category-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 10px;
+  width: 56px;
+  height: 56px;
   background-color: #111;
   color: #fff;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
-  flex-shrink: 0;
+  margin: 0 auto 20px;
+  font-size: 1.5rem;
 }
 
 .category-title {
   font-size: 1rem;
   font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #111;
 }
 
 .category-count {
-  font-size: 0.9rem;
-  color: #555;
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0;
 }
 
+/* Featured Freelancers */
 .freelancer-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 24px;
 }
 
 .freelancer-card {
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 14px;
-  background-color: #fdfdfd;
-  padding: 24px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 32px 24px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  transition: all 0.2s ease;
+}
+
+.freelancer-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
 }
 
 .freelancer-avatar {
-  width: 72px;
-  height: 72px;
-  margin: 0 auto 8px;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 50%;
-  border: 1px solid #111;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
-  font-size: 1.2rem;
+  margin: 0 auto 16px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
 }
 
 .freelancer-name {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   font-weight: 600;
+  margin: 0 0 4px 0;
+  color: #111;
 }
 
 .freelancer-role {
-  color: #555;
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0 0 12px 0;
 }
 
 .freelancer-rating {
+  font-size: 0.95rem;
   font-weight: 600;
+  color: #111;
+  margin: 0 0 16px 0;
 }
 
-.freelancer-tags {
+.freelancer-skills {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.freelancer-tags span {
+.skill-tag {
+  padding: 6px 12px;
+  background-color: transparent;
   border: 1px solid #111;
-  border-radius: 999px;
-  padding: 4px 10px;
-  font-size: 0.85rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #111;
 }
 
-.steps-section {
-  text-align: center;
+/* How It Works */
+.how-it-works {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  padding: 64px 48px;
 }
 
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 40px;
 }
 
 .step-card {
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 12px;
-  padding: 24px;
-  background-color: #fdfdfd;
+  text-align: center;
 }
 
 .step-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 999px;
+  width: 72px;
+  height: 72px;
   background-color: #111;
   color: #fff;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 12px;
-  font-size: 1.5rem;
+  margin: 0 auto 20px;
+  font-size: 2rem;
 }
 
-.step-count {
+.step-number {
   font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  margin-bottom: 6px;
-  color: #666;
+  letter-spacing: 0.1em;
+  color: #999;
+  margin: 0 0 12px 0;
+  font-weight: 600;
 }
 
 .step-title {
+  font-size: 1.125rem;
   font-weight: 600;
-  font-size: 1.1rem;
-  margin-bottom: 8px;
+  margin: 0 0 12px 0;
+  color: #111;
 }
 
 .step-description {
-  color: #555;
-}
-
-.cta-section {
-  margin: 48px 0;
-}
-
-.cta-card {
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 14px;
-  background-color: #fff;
-  text-align: center;
-  padding: 64px 40px;
-}
-
-.cta-card h2 {
-  font-size: 2.4rem;
-  margin-bottom: 20px;
-}
-
-.cta-card p {
-  font-size: 1.05rem;
-  margin-bottom: 24px;
-  color: #444;
-}
-
-.home-footer {
-  text-align: center;
+  font-size: 0.95rem;
   color: #666;
-  margin-top: 32px;
+  margin: 0;
+  line-height: 1.5;
 }
 
-@media (max-width: 960px) {
-  .nav-links {
-    display: none;
-  }
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  margin-bottom: 40px;
+}
 
-  .hero-section,
-  .section-block {
-    padding: 32px;
-  }
+.cta-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  color: #111;
+}
 
-  .category-grid,
-  .freelancer-grid,
-  .steps-grid {
+.cta-section p {
+  font-size: 1.125rem;
+  color: #666;
+  margin: 0 0 32px 0;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 32px 0;
+  color: #999;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .category-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .freelancer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
   .hero-section h1 {
-    font-size: 2.4rem;
+    font-size: 2.5rem;
   }
 }
 
 @media (max-width: 640px) {
-  .home-page {
-    padding: 24px 20px 48px;
+  .category-grid {
+    grid-template-columns: 1fr;
   }
 
-  .category-grid,
-  .freelancer-grid,
-  .steps-grid {
+  .freelancer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
   }
 
   .hero-actions {
     flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
   }
 }
