@@ -95,18 +95,22 @@ main {
 .category-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .category-card {
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  padding: 48px 32px;
+  border: 1.5px solid rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  padding: 56px 36px;
   text-align: center;
   transition: all 0.2s ease;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .category-card:hover {
@@ -144,18 +148,23 @@ main {
 .freelancer-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .freelancer-card {
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  padding: 32px 24px;
+  border: 1.5px solid rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  padding: 40px 32px;
   text-align: center;
   transition: all 0.2s ease;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .freelancer-card:hover {
@@ -164,37 +173,38 @@ main {
 }
 
 .freelancer-avatar {
-  width: 80px;
-  height: 80px;
+  width: 88px;
+  height: 88px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 16px;
-  font-size: 2rem;
+  margin: 0 0 20px 0;
+  font-size: 2.2rem;
   font-weight: 700;
   color: #fff;
+  flex-shrink: 0;
 }
 
 .freelancer-name {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin: 0 0 4px 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 6px 0;
   color: #111;
 }
 
 .freelancer-role {
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   color: #666;
-  margin: 0 0 12px 0;
+  margin: 0 0 14px 0;
 }
 
 .freelancer-rating {
   font-size: 0.95rem;
   font-weight: 600;
   color: #111;
-  margin: 0 0 16px 0;
+  margin: 0 0 18px 0;
 }
 
 .freelancer-skills {
@@ -205,12 +215,13 @@ main {
 }
 
 .skill-tag {
-  padding: 6px 12px;
+  padding: 7px 14px;
   background-color: transparent;
-  border: 1px solid #111;
+  border: 1.5px solid #111;
   border-radius: 20px;
   font-size: 0.8rem;
   color: #111;
+  font-weight: 500;
 }
 
 /* How It Works */
