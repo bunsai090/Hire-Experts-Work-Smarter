@@ -160,7 +160,7 @@ main {
   padding: 40px 32px;
   text-align: center;
   transition: all 0.2s ease;
-  min-height: 320px;
+  min-height: 360px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -173,13 +173,13 @@ main {
 }
 
 .freelancer-avatar {
-  width: 88px;
-  height: 88px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 0 0 20px 0;
+  margin: 0 0 24px 0;
   flex-shrink: 0;
-  border: 2px solid #e5e5e5;
+  border: 3px solid #e5e5e5;
 }
 
 .freelancer-name {
