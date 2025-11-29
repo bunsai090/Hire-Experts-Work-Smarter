@@ -101,11 +101,13 @@ main {
   width: 48px;
   height: 48px;
   border-radius: 10px;
-  border: 1px solid #111;
+  background-color: #111;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
+  font-size: 1.2rem;
+  flex-shrink: 0;
 }
 
 .category-title {
@@ -196,12 +198,13 @@ main {
   width: 56px;
   height: 56px;
   border-radius: 999px;
-  border: 1px solid #111;
+  background-color: #111;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 12px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .step-count {

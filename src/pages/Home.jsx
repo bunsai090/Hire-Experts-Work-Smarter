@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
+import { FiCheckCircle, FiCode, FiEdit3, FiPenTool, FiTrendingUp, FiUserPlus, FiVideo } from 'react-icons/fi'
 import Header from '../components/layout/Header'
 import './Home.css'
 
 const categories = [
-  { title: 'Development', count: '2.5k+ experts', icon: '</>' },
-  { title: 'Design', count: '1.8k+ experts', icon: '🎨' },
-  { title: 'Writing', count: '1.2k+ experts', icon: '✏️' },
-  { title: 'Video Editing', count: '950+ experts', icon: '🎬' }
+  { title: 'Development', count: '2.5k+ experts', icon: FiCode },
+  { title: 'Design', count: '1.8k+ experts', icon: FiPenTool },
+  { title: 'Writing', count: '1.2k+ experts', icon: FiEdit3 },
+  { title: 'Video Editing', count: '950+ experts', icon: FiVideo }
 ]
 
 const featuredFreelancers = [
@@ -34,17 +35,17 @@ const steps = [
   {
     label: 'Create Account',
     description: 'Sign up as a client or freelancer in seconds',
-    icon: '👤'
+    icon: FiUserPlus
   },
   {
     label: 'Post or Browse',
     description: 'Post jobs or browse available opportunities',
-    icon: '📈'
+    icon: FiTrendingUp
   },
   {
     label: 'Start Working',
     description: 'Connect, collaborate, and get paid',
-    icon: '✔️'
+    icon: FiCheckCircle
   }
 ]
 
@@ -79,15 +80,20 @@ export default function Home() {
           </div>
 
           <div className="category-grid">
-            {categories.map((category) => (
-              <article key={category.title} className="category-card">
-                <span className="category-icon">{category.icon}</span>
-                <div>
-                  <p className="category-title">{category.title}</p>
-                  <p className="category-count">{category.count}</p>
-                </div>
-              </article>
-            ))}
+            {categories.map((category) => {
+              const IconComponent = category.icon
+              return (
+                <article key={category.title} className="category-card">
+                  <span className="category-icon">
+                    <IconComponent />
+                  </span>
+                  <div>
+                    <p className="category-title">{category.title}</p>
+                    <p className="category-count">{category.count}</p>
+                  </div>
+                </article>
+              )
+            })}
           </div>
         </section>
 
@@ -121,14 +127,19 @@ export default function Home() {
           </div>
 
           <div className="steps-grid">
-            {steps.map((step, index) => (
-              <article key={step.label} className="step-card">
-                <span className="step-icon">{step.icon}</span>
-                <p className="step-count">STEP {index + 1}</p>
-                <p className="step-title">{step.label}</p>
-                <p className="step-description">{step.description}</p>
-              </article>
-            ))}
+            {steps.map((step, index) => {
+              const IconComponent = step.icon
+              return (
+                <article key={step.label} className="step-card">
+                  <span className="step-icon">
+                    <IconComponent />
+                  </span>
+                  <p className="step-count">STEP {index + 1}</p>
+                  <p className="step-title">{step.label}</p>
+                  <p className="step-description">{step.description}</p>
+                </article>
+              )
+            })}
           </div>
         </section>
 
