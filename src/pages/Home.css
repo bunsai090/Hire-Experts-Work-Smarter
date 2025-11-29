@@ -175,16 +175,11 @@ main {
 .freelancer-avatar {
   width: 88px;
   height: 88px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  object-fit: cover;
   margin: 0 0 20px 0;
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #fff;
   flex-shrink: 0;
+  border: 2px solid #e5e5e5;
 }
 
 .freelancer-name {

@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
 import { FiCheckCircle, FiCode, FiEdit3, FiPenTool, FiTrendingUp, FiUserPlus, FiVideo } from 'react-icons/fi'
 import Header from '../components/layout/Header'
+import AmpexImg from '../assets/Ampex.png'
+import BunsaiImg from '../assets/Bunsai.png'
+import YatoohImg from '../assets/Yatooh.png'
 import './Home.css'
 
 const categories = [
@@ -12,22 +15,25 @@ const categories = [
 
 const featuredFreelancers = [
   {
-    name: 'Sarah Chen',
+    name: 'Ampex',
     role: 'Full Stack Developer',
     rating: '4.9',
-    skills: ['React', 'Node.js', 'TypeScript']
+    skills: ['React', 'Node.js', 'PHP'],
+    image: AmpexImg
   },
   {
-    name: 'Marcus Johnson',
-    role: 'UI/UX Designer',
-    rating: '5.0',
-    skills: ['Figma', 'Webflow', 'Branding']
+    name: 'Bunsai',
+    role: 'Frontend Developer',
+    rating: '4.7',
+    skills: ['Figma', 'HTML', 'CSS'],
+    image: BunsaiImg
   },
   {
-    name: 'Elena Rodriguez',
-    role: 'Content Writer',
+    name: 'Yatooh',
+    role: 'Backend Developer',
     rating: '4.8',
-    skills: ['SEO', 'Copywriting', 'Blogging']
+    skills: ['PostgreSQL', 'Firebase', 'Node.js'],
+    image: YatoohImg
   }
 ]
 
@@ -100,9 +106,11 @@ export default function Home() {
           <div className="freelancer-grid">
             {featuredFreelancers.map((freelancer) => (
               <div key={freelancer.name} className="freelancer-card">
-                <div className="freelancer-avatar">
-                  {freelancer.name.charAt(0)}
-                </div>
+                <img
+                  src={freelancer.image}
+                  alt={freelancer.name}
+                  className="freelancer-avatar"
+                />
                 <h3 className="freelancer-name">{freelancer.name}</h3>
                 <p className="freelancer-role">{freelancer.role}</p>
                 <p className="freelancer-rating">★ {freelancer.rating}</p>
