@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import AuthLayout from './AuthLayout'
-import './Auth.css'
+import AuthLayout from '../Auth'
+import './Register.css'
 
 export default function Register() {
   const [role, setRole] = useState('freelancer')
