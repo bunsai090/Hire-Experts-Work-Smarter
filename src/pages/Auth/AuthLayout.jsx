@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import './Auth.css'
+import './AuthLayout.css'
 
 export default function AuthLayout({ title, description, tabs = [], activeTab, onTabChange, children }) {
   return (

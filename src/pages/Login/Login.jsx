@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import AuthLayout from './AuthLayout'
-import './Auth.css'
+import AuthLayout from '../Auth'
+import './Login.css'
 
 export default function Login() {
   const [role, setRole] = useState('client')
