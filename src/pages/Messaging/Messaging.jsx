@@ -1,6 +1,6 @@
-import ChatList from '../components/messaging/ChatList'
-import ChatRoom from '../components/messaging/ChatRoom'
-import Header from '../components/layout/Header'
+import ChatList from '../../components/messaging/ChatList'
+import ChatRoom from '../../components/messaging/ChatRoom'
+import Header from '../../components/layout/Header'
 import './Messaging.css'
 
 const chatThreads = [

@@ -1,4 +1,4 @@
-import Header from '../components/layout/Header'
+import Header from '../../components/layout/Header'
 import './Gamification.css'
 
 const badges = [

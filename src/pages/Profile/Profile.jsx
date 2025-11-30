@@ -1,4 +1,4 @@
-import Header from '../components/layout/Header'
+import Header from '../../components/layout/Header'
 import './Profile.css'
 
 const stats = [

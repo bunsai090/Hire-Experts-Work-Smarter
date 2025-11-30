@@ -1,4 +1,4 @@
-import Header from '../components/layout/Header'
+import Header from '../../components/layout/Header'
 import './JobPost.css'
 
 const suggestedSkills = ['React', 'TypeScript', 'Node.js', 'UI/UX Design', 'Figma', 'Python', 'AWS']

@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import Header from '../../components/layout/Header'
 import { FiCheckCircle, FiCode, FiEdit3, FiPenTool, FiTrendingUp, FiUserPlus, FiVideo } from 'react-icons/fi'
-import Header from '../components/layout/Header'
-import AmpexImg from '../assets/Ampex.png'
-import BunsaiImg from '../assets/Bunsai.png'
-import YatoohImg from '../assets/Yatooh.png'
+import AmpexImg from '../../assets/Ampex.png'
+import BunsaiImg from '../../assets/Bunsai.png'
+import YatoohImg from '../../assets/Yatooh.png'
 import './Home.css'
 
 const categories = [
