@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import { FiAward, FiBriefcase, FiHome, FiMessageCircle, FiSettings, FiUser } from 'react-icons/fi'
 import { Link, NavLink } from 'react-router-dom'
+import TrabahoHubLogo from '../../assets/TrabahoHub.png'
 import './Header.css'
 
 const landingLinks = [
@@ -18,22 +19,12 @@ const appLinks = [
   { label: 'Settings', path: '/settings', icon: FiSettings }
 ]
 
-const glyphs = Array.from({ length: 8 })
-
 export default function Header({ className = '', variant = 'landing' }) {
   return (
     <header className={`global-nav ${variant} ${className}`.trim()}>
       <div className="brand-cluster">
-        <span className="brand-icon">✶</span>
-        <div className="brand-label">
-          <span className="brand-name">TrabahoHub</span>
-          <span className="brand-tagline">Hire Experts. Work Smarter.</span>
-        </div>
-        <div className="nav-glyphs" aria-hidden="true">
-          {glyphs.map((_, index) => (
-            <span key={`glyph-${index}`} />
-          ))}
-        </div>
+        <img src={TrabahoHubLogo} alt="TrabahoHub" className="brand-logo" />
+        <span className="brand-baybayin">ᜆᜇᜊᜑᜓ ᜑᜊᜓ</span>
       </div>
 
       {variant === 'landing' ? (
