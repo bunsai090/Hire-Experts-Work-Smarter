@@ -1,3 +1,6 @@
+/* Baybayin Font Import - Using a more stylized font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tagalog&family=Caveat:wght@400;500;600;700&display=swap');
+
 .global-nav {
   position: sticky;
   top: 0;
@@ -16,23 +19,18 @@
   gap: 12px;
 }
 
+.brand-logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
 .brand-icon {
   font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.nav-glyphs {
-  display: flex;
-  gap: 3px;
-}
-
-.nav-glyphs span {
-  width: 6px;
-  height: 20px;
-  border-radius: 2px;
-  background-color: #111;
 }
 
 .nav-links {
@@ -63,6 +61,9 @@
   display: inline-block;
   cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.solid-btn {
   border: 1px solid #111;
 }
 
@@ -78,10 +79,13 @@
 .ghost-btn {
   background-color: transparent;
   color: #111;
+  border: none;
+  padding: 10px 0;
 }
 
 .ghost-btn:hover {
-  background-color: #f5f5f5;
+  background-color: transparent;
+  color: #666;
 }
 
 .nav-actions {
@@ -145,6 +149,18 @@
   letter-spacing: 0.02em;
 }
 
+.brand-baybayin {
+  font-family: 'Noto Sans Tagalog', 'Caveat', cursive, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #111;
+  line-height: 1.3;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .brand-tagline {
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -152,9 +168,180 @@
   color: #666;
 }
 
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #111;
+  cursor: pointer;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-toggle:hover {
+  color: #666;
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(45, 45, 45, 0.8);
+  z-index: 1000;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-menu-overlay.is-open {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-content {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 0;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+  padding-bottom: 4px;
+}
+
+.mobile-menu-header .brand-cluster {
+  gap: 10px;
+}
+
+.mobile-menu-header .brand-logo {
+  height: 40px;
+}
+
+.mobile-menu-header .brand-baybayin {
+  font-size: 1.3rem;
+}
+
+.mobile-menu-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #111;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.mobile-menu-close:hover {
+  color: #666;
+}
+
+.mobile-menu-divider {
+  height: 1px;
+  background-color: #e5e5e5;
+  margin: 24px 0;
+  width: 100%;
+}
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mobile-menu-links a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 14px 0;
+  transition: color 0.2s ease;
+  display: block;
+}
+
+.mobile-menu-links a:hover {
+  color: #666;
+}
+
+.mobile-menu-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mobile-ghost-btn {
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  background-color: #fff;
+  color: #111;
+  border: 1px solid #111;
+  width: 100%;
+}
+
+.mobile-ghost-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.mobile-solid-btn {
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #111;
+  width: 100%;
+}
+
+.mobile-solid-btn:hover {
+  background-color: #000;
+}
+
 @media (max-width: 1024px) {
   .nav-links {
     display: none;
+  }
+
+  .nav-actions {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
   }
 
   .global-nav {
@@ -182,8 +369,35 @@
 }
 
 @media (max-width: 640px) {
-  .nav-glyphs {
-    display: none;
+  .global-nav {
+    padding: 12px 20px;
+  }
+
+  .brand-logo {
+    height: 35px;
+  }
+
+  .brand-baybayin {
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+  }
+
+  .brand-cluster {
+    gap: 8px;
+  }
+
+  .mobile-menu-content {
+    padding: 24px 20px;
+    margin-top: 0;
+    max-width: 100%;
+  }
+
+  .mobile-menu-header .brand-logo {
+    height: 35px;
+  }
+
+  .mobile-menu-header .brand-baybayin {
+    font-size: 1.1rem;
   }
 
   .app-link span:not(.link-icon) {
