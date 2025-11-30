@@ -192,12 +192,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #2d2d2d;
+  background-color: rgba(45, 45, 45, 0.8);
+  backdrop-filter: blur(2px);
   z-index: 1000;
   display: none;
   align-items: flex-start;
   justify-content: center;
-  padding: 20px;
+  padding: 16px;
   overflow-y: auto;
   opacity: 0;
   visibility: hidden;
@@ -212,12 +213,13 @@
 
 .mobile-menu-content {
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 12px;
   width: 100%;
-  max-width: 400px;
-  margin-top: 20px;
-  padding: 24px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  max-width: 380px;
+  margin-top: 40px;
+  padding: 28px 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  position: relative;
 }
 
 .mobile-menu-header {
@@ -225,6 +227,19 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0;
+  padding-bottom: 4px;
+}
+
+.mobile-menu-header .brand-cluster {
+  gap: 10px;
+}
+
+.mobile-menu-header .brand-logo {
+  height: 40px;
+}
+
+.mobile-menu-header .brand-baybayin {
+  font-size: 1.3rem;
 }
 
 .mobile-menu-close {
@@ -247,13 +262,14 @@
 .mobile-menu-divider {
   height: 1px;
   background-color: #e5e5e5;
-  margin: 20px 0;
+  margin: 24px 0;
+  width: 100%;
 }
 
 .mobile-menu-links {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 0;
 }
 
 .mobile-menu-links a {
@@ -261,8 +277,9 @@
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
-  padding: 12px 0;
+  padding: 14px 0;
   transition: color 0.2s ease;
+  display: block;
 }
 
 .mobile-menu-links a:hover {
@@ -272,22 +289,23 @@
 .mobile-menu-actions {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .mobile-ghost-btn {
-  padding: 12px 20px;
-  border-radius: 6px;
-  font-size: 0.9rem;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
   font-weight: 600;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   cursor: pointer;
   transition: all 0.2s ease;
   text-align: center;
   background-color: #fff;
   color: #111;
   border: 1px solid #111;
+  width: 100%;
 }
 
 .mobile-ghost-btn:hover {
@@ -295,18 +313,19 @@
 }
 
 .mobile-solid-btn {
-  padding: 12px 20px;
-  border-radius: 6px;
-  font-size: 0.9rem;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
   font-weight: 600;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   cursor: pointer;
   transition: all 0.2s ease;
   text-align: center;
   background-color: #111;
   color: #fff;
   border: 1px solid #111;
+  width: 100%;
 }
 
 .mobile-solid-btn:hover {
@@ -369,8 +388,17 @@
   }
 
   .mobile-menu-content {
-    padding: 20px;
-    margin-top: 10px;
+    padding: 24px 20px;
+    margin-top: 20px;
+    max-width: calc(100% - 32px);
+  }
+
+  .mobile-menu-header .brand-logo {
+    height: 35px;
+  }
+
+  .mobile-menu-header .brand-baybayin {
+    font-size: 1.1rem;
   }
 
   .app-link span:not(.link-icon) {
